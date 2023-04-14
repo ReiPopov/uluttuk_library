@@ -1,0 +1,12 @@
+@import "reset";
+@import "variables/global";
+
+body {
+  background: black;
+  font: var(--font-m);
+}
+
+.container {
+  width: 1070px;
+  margin: 0 auto;
+}

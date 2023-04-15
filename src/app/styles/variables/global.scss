@@ -1,7 +1,7 @@
 :root {
   --font-family-main: 'Roboto', sans-serif;;
 
-   // s
+  // s
   --font-size-s: 12px;
   --font-line-s: 20px;
   --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -17,6 +17,7 @@
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
   --header-bg-image: url('../../../shared/assets/background/header_background.jpeg');
-  --loction-icon: url('../../../shared/assets/icons/location_icon.png');
-  --human-icon: url('../../../shared/assets/icons/human_icon.png');
+
+  // colors
+  --nav-bg: #2F2F2F
 }

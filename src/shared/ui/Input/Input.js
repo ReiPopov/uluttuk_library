@@ -14,7 +14,7 @@ export const Input = (props) => {
         className={classNames(cls.input, {}, [className])}
         placeholder={placeholder}
       />
-      {/*<FontAwesomeIcon icon={faMagnifyingGlass} className={cls.icon}/>*/}
+      <FontAwesomeIcon icon={faMagnifyingGlass} className={cls.icon}/>
     </div>
   );
 };

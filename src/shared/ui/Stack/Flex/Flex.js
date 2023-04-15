@@ -1,31 +1,31 @@
 import React from 'react';
 import {classNames} from "../../../lib/classNames/classNames";
-import './Flex.scss'
+import cls from './Flex.module.scss'
 import PropTypes from "prop-types";
 
 const justifyClasses = {
-  start: 'justifyStart',
-  end: 'justifyEnd',
-  center: 'justifyCenter',
-  between: 'justifyBetween'
+  start: cls.justifyStart,
+  end: cls.justifyEnd,
+  center: cls.justifyCenter,
+  between: cls.justifyBetween
 }
 
 const alignClasses = {
-  start: 'alignStart',
-  end: 'alignEnd',
-  center: 'alignCenter'
+  start: cls.alignStart,
+  end: cls.alignEnd,
+  center: cls.alignCenter
 }
 
 const directionClasses = {
-  row: 'directionRow',
-  column: 'directionColumn'
+  row: cls.directionRow,
+  column: cls.directionColumn
 }
 
 const gapClasses = {
-  4: 'gap4',
-  8: 'gap8',
-  16: 'gap16',
-  32: 'gap32'
+  4: cls.gap4,
+  8: cls.gap8,
+  16: cls.gap16,
+  32: cls.gap32
 }
 
 export const Flex = (props) => {
@@ -48,13 +48,11 @@ export const Flex = (props) => {
   ]
 
   return (
-    <div className={classNames('flex', {max}, classes)}>
+    <div className={classNames(cls.flex, {max}, classes)}>
       {children}
     </div>
   );
 };
-
-console.log(Object.keys(justifyClasses))
 
 Flex.propTypes = {
   className: PropTypes.string,

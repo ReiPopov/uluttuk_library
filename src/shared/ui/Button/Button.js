@@ -2,24 +2,13 @@ import {memo} from "react";
 import PropTypes from "prop-types";
 import {classNames} from "../../lib/classNames/classNames";
 
-import './Button.scss'
-
-const buttonVariant = {
-  'clear': 'clear',
-  'outline': 'outline',
-}
-
-const buttonSizes = {
-  'size_m': 'size_m',
-  'size_l': 'size_l',
-  'size_s': 'size_s',
-}
+import cls from './Button.module.scss'
 
 export const Button = memo(function Button(props) {
   const {children, className, variant = 'clear', size = 'size_m'} = props
   return (
     <button
-      className={classNames('', {}, [className, buttonVariant[variant], buttonSizes[size]])}
+      className={classNames(cls.button, {}, [className, cls[variant], cls[size]])}
     >
       {children}
     </button>

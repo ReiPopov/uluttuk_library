@@ -1,12 +1,20 @@
 .inputWrapper {
   position: relative;
+  width: 400px;
 }
+
 .input {
   border-radius: 10px;
   outline: none;
   padding: 5px 16px;
   border: none;
+  width: 100%;
 }
+
 .icon {
   position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  padding: 5px;
 }

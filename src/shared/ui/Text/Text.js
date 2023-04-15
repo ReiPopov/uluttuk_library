@@ -1,24 +1,12 @@
 import {memo} from 'react'
 import PropTypes from "prop-types";
 import {classNames} from "../../lib/classNames/classNames";
-import './Text.scss'
+import cls from './Text.module.scss'
 
 const mapSizeToHeaderTag = {
   'size_s': 'h3',
   'size_m': 'h2',
   'size_l': 'h3'
-}
-
-const alignClasses = {
-  right: 'right',
-  left: 'left',
-  center: 'center',
-}
-
-const sizeClasses = {
-  size_s: 'size_s',
-  size_m: 'size_m',
-  size_l: 'size_l',
 }
 
 export const Text = memo(function Text(props) {
@@ -30,14 +18,14 @@ export const Text = memo(function Text(props) {
     size = 'size_m'
   } = props
 
-  const additional = [className, alignClasses[align], sizeClasses[size]]
+  const additional = [className, cls[align], cls[size]]
 
   const HeaderTag = mapSizeToHeaderTag[size]
 
   return (
     <div className={classNames('', {}, additional)}>
-      {title && <HeaderTag className={'title'}>{title}</HeaderTag>}
-      {text && <p className={'text'}>{text}</p>}
+      {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
+      {text && <p className={cls.text}>{text}</p>}
     </div>
   )
 })

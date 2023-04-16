@@ -1,0 +1,22 @@
+.accordion_item {
+  background: var(--primary-bg);
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.question {
+  border-radius: 20px;
+  background: var(--primary-bg);
+  cursor: pointer;
+  padding: 20px 10px;
+}
+
+.active {
+  background: var(--nav-link-bg);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.answer_wrapper {
+  padding: 0 10px 20px;
+}

@@ -3,10 +3,25 @@
 
 body {
   font: var(--font-m);
+  font-family: var(--font-family-main);
 }
 
 .container {
   width: 100%;
-  max-width: 1070px;
+  max-width: 1170px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
 }

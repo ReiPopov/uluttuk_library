@@ -1,0 +1,27 @@
+.rightsBlock {
+  padding: 60px 0;
+}
+
+.infoBlock {
+  margin-top: 60px;
+}
+
+.image {}
+
+.text {
+  padding-right: 40px;
+}
+
+@media (max-width: 1200px) {
+  .image {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 970px) {
+  .infoBlock {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+}

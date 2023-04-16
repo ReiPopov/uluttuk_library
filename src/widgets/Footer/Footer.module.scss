@@ -1,0 +1,44 @@
+.footer {
+  margin-top: auto;
+  background: var(--primary-bg);
+  padding: 60px 0;
+}
+
+.link {
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    width: 300px;
+    height: 200px;
+  }
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 970px) {
+  .logo {
+    width: 240px;
+    height: 150px;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}

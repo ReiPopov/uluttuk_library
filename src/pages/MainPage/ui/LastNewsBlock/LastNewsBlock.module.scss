@@ -1,0 +1,14 @@
+.lastNewsBlock {
+  background: var(--primary-bg);
+  padding: 60px 0;
+}
+
+.contentInfo {
+  margin-top: 60px;
+}
+
+@media (max-width: 970px) {
+  .contentInfo {
+    flex-direction: column;
+  }
+}

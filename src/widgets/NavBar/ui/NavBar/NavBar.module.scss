@@ -1,3 +1,9 @@
 .navbar {
-  background: var(--nav-bg);
+  background: var(--primary-bg);
+}
+
+@media (max-width: 970px) {
+  .navbar {
+    display: none;
+  }
 }

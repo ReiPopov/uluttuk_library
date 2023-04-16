@@ -5,8 +5,8 @@
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .text {
@@ -16,3 +16,14 @@
 .icon {
   color: #fff;
 }
+
+.menuIcon {
+  font-size: 35px;
+}
+
+@media (max-width: 1200px) {
+  .icon {
+    font-size: 30px;
+  }
+}
+

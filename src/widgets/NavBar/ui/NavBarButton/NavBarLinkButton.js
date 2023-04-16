@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 
 import cls from './NavBarLinkButton.module.scss'
-import {classNames, Text, VStack} from "../../../../shared";
+import {classNames, MEDIUM_SCREEN, Text, useWindowDimensions} from "../../../../shared";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const NavBarLinkButton = memo(function NavBarLinkButton(props) {
@@ -15,12 +15,11 @@ export const NavBarLinkButton = memo(function NavBarLinkButton(props) {
     onClick,
     active
   } = props
+  const {width} = useWindowDimensions()
   return (
     <Link to={to} onClick={onClick} className={classNames(cls.navBarLink, {[cls.active]: active}, [className])}>
-      <VStack align={'center'}>
-        <FontAwesomeIcon icon={icon} className={cls.icon}/>
-        <Text text={text} className={cls.text}/>
-      </VStack>
+      <FontAwesomeIcon icon={icon} className={cls.icon}/>
+      <Text text={text} size={width > MEDIUM_SCREEN ? 'size_m' : 'size_s'} className={cls.text}/>
     </Link>
   );
 })

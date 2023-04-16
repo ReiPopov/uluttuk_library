@@ -1,0 +1,23 @@
+.advantages {
+  background: var(--primary-bg);
+  padding: 60px 0;
+}
+
+.contentInfo {
+  margin-top: 60px;
+}
+
+.icon {
+  color: #fff;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 970px) {
+  .contentInfo {
+    flex-direction: column;
+  }
+}

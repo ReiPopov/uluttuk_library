@@ -39,8 +39,7 @@ export const Footer = () => {
             <Text color={'white'} size={'size_l'} title={'Контакты'} className={cls.title}/>
             <VStack gap={'16'} align={isSmallScreen ? 'end' : 'center'}>
               <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Адрес:'}
-                    text={'Кыргызстан, г. Бишкек,\n' +
-                      'ул. Абдрахманова 208'}/>
+                    text={'Кыргызстан, г. Бишкек, ул. Абдрахманова 208'}/>
               <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Email:'}
                     text={'library@nlkr.gov.kg'}/>
               <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Телефон:'}
@@ -51,6 +50,24 @@ export const Footer = () => {
             </VStack>
           </VStack>
         </Flex>
+      </div>
+      <div className={cls.footer_copyright_wrapper}>
+        <div className="container">
+          <Text
+            size={'size_l'}
+            className={cls.footer_copyright_text}
+            align={'center'}
+            color={'white'}
+            text={'Отдел диссертаций Национальной Библиотеки Кыргызской Республики имени Алыкула Осмонова'}
+          />
+          <Text
+            size={'size_l'}
+            className={cls.footer_copyright_text}
+            align={'center'}
+            color={'white'}
+            text={'©️2023 Все права защищены'}
+          />
+        </div>
       </div>
     </footer>
   );

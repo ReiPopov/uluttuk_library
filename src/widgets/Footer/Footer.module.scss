@@ -1,7 +1,7 @@
 .footer {
   margin-top: auto;
   background: var(--primary-bg);
-  padding: 60px 0;
+  padding: 60px 0 0 0;
 }
 
 .link {
@@ -19,6 +19,16 @@
 
 .icon {
   cursor: pointer;
+}
+
+.footer_copyright_wrapper {
+  background: var(--footer-copiright-bg);
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.footer_copyright_text {
+  opacity: 0.5;
 }
 
 @media (max-width: 1200px) {

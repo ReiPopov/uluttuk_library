@@ -5,8 +5,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faLocationDot, faUser} from '@fortawesome/free-solid-svg-icons'
 import {Button, HStack, SMALL_SCREEN, Text, useWindowDimensions, VStack} from "../../shared";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
-export const Header = () => {
+export const Header = (props) => {
+  const {toggle} = props
   const {width} = useWindowDimensions();
 
   return (
@@ -20,13 +22,13 @@ export const Header = () => {
             <HStack gap={'16'}>
               <FontAwesomeIcon size={'2x'} icon={faLocationDot} className={cls.icon}/>
               <VStack>
-                <Text color={'white'} size={'size_l'} text={'Кыргызстан, г. Бишкек,'} className={cls.text}/>
-                <Text color={'white'} size={'size_l'} text={'ул. Абдрахманова 208'} className={cls.text}/>
+                <Text color={'white'} size={'size_l'} text={'Кыргызстан, г. Бишкек,'}/>
+                <Text color={'white'} size={'size_l'} text={'ул. Абдрахманова 208'}/>
               </VStack>
               <FontAwesomeIcon size={'2x'} icon={faUser} className={cls.icon}/>
               <VStack>
-                <Text color={'white'} size={'size_l'} text={'Тел.: +996 (312) 30-46-75'} className={cls.text}/>
-                <Text color={'white'} size={'size_l'} text={'Факс: +996 (312) 30-46-88'} className={cls.text}/>
+                <Text color={'white'} size={'size_l'} text={'Тел.: +996 (312) 30-46-75'}/>
+                <Text color={'white'} size={'size_l'} text={'Факс: +996 (312) 30-46-88'}/>
               </VStack>
             </HStack>
             <VStack>
@@ -38,7 +40,7 @@ export const Header = () => {
         }
         {
           width < SMALL_SCREEN && (
-            <Button>
+            <Button onClick={toggle}>
               <FontAwesomeIcon icon={faBars} className={cls.menuIcon}/>
             </Button>
           )
@@ -47,3 +49,7 @@ export const Header = () => {
     </header>
   );
 };
+
+Header.propTypes = {
+  toggle: PropTypes.func
+}

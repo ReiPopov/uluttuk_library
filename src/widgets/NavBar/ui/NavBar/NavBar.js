@@ -46,7 +46,7 @@ export const NavBar = () => {
 
   return (
     <HStack className={cls.navbar}>
-      <HStack justify={'between'} className={'container'}>
+      <HStack justify={'between'} gap={'32'} className={'container'}>
         <Input placeholder={'Поиск по сайту...'} icon={faMagnifyingGlass}/>
         <HStack gap={'16'}>
           {linkButtons.map((item) =>

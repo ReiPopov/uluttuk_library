@@ -20,6 +20,20 @@ body {
   min-height: 100vh;
 }
 
+.main {
+  margin-top: 0;
+}
+
+.stop_scrolling {
+  overflow: hidden;
+}
+
+@media (max-width: 970px) {
+  .main {
+    margin-top: 98px;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 970px;

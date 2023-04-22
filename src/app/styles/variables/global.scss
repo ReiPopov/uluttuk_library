@@ -28,9 +28,15 @@
   --font-line-l: 44px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
+  // xl
+  --font-size-xl: 96px;
+  --font-line-xl: 104px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
   // images
   --header-bg-image: url('../../../shared/assets/background/header_background.jpeg');
   --main_page_bg_image: url('../../../shared/assets/background/main_page_background.jpg');
+  --about_page_bg_image: url('../../../shared/assets/background/about_page_background.jpg');
 
   // colors
   --primary-bg: #2F2F2F;

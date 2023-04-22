@@ -1,7 +1,9 @@
 import React from 'react';
-import cls from './Advantages.module.scss'
+import cls from './AdvantagesBlock.module.scss'
 import {classNames, HStack, Text} from "../../../../shared";
 import WorldIcon from '../../../../shared/assets/icons/world_icon.png'
+import BookWatchIcon from '../../../../shared/assets/icons/book_watch.png'
+import BookSearchIcon from '../../../../shared/assets/icons/book_search.png'
 import {AdvantagesItem} from "./AdvantagesItem";
 
 const items = [
@@ -13,19 +15,19 @@ const items = [
   },
   {
     id: Math.floor(Math.random() * 200),
-    img: WorldIcon,
+    img: BookWatchIcon,
     title: 'Удобство работы',
     text: 'Lorem ipsum — популярный вариант бессмысленного текста, имитирующего латынь, используемого в HTML-шаблонах для заполнения страниц'
   },
   {
     id: Math.floor(Math.random() * 200),
-    img: WorldIcon,
+    img: BookSearchIcon,
     title: 'Простота поиска',
     text: 'Lorem ipsum — популярный вариант бессмысленного текста, имитирующего латынь, используемого в HTML-шаблонах для заполнения страниц'
   },
 ]
 
-export const Advantages = () => {
+export const AdvantagesBlock = () => {
   return (
     <div className={cls.advantages}>
       <Text

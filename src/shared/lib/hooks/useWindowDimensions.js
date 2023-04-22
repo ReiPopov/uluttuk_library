@@ -8,6 +8,8 @@ function getWindowDimensions() {
   };
 }
 
+// хук для получения размеров страницы
+
 export function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 

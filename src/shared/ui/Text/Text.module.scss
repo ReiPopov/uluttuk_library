@@ -50,6 +50,17 @@
   }
 }
 
+.size_xl {
+  .title {
+    font: var(--font-xl);
+    font-family: var(--font-family-title);
+  }
+
+  .text {
+    font: var(--font-l);
+  }
+}
+
 .left {
   text-align: left;
 }
@@ -84,6 +95,18 @@
       font: var(--font-s);
     }
   }
+
+
+  .size_xl {
+    .title {
+      font: var(--font-l);
+      font-family: var(--font-family-title);
+    }
+
+    .text {
+      font: var(--font-m);
+    }
+  }
 }
 
 @media (max-width: 970px) {
@@ -99,13 +122,10 @@
   }
 
   .size_l {
-    .title {
+    .text {
       font: var(--font-s);
       font-family: var(--font-family-title);
     }
-
-    .text {
-      font: var(--font-xs);
-    }
   }
+
 }

@@ -11,7 +11,7 @@ export const Text = memo(function Text(props) {
     align = 'left',
     size = 'size_m',
     color = 'black',
-    headerCategory = 'h3'
+    headerCategory = 'h3',
   } = props
 
   const additional = [className, cls[align], cls[size]]
@@ -30,8 +30,9 @@ Text.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
   title: PropTypes.string,
+  customSize: PropTypes.number,
   align: PropTypes.oneOf(['right', 'left', 'center']),
-  size: PropTypes.oneOf(['size_s', 'size_m', 'size_l', 'size_xs']),
+  size: PropTypes.oneOf(['size_s', 'size_m', 'size_l', 'size_xs', 'size_xl']),
   color: PropTypes.oneOf(['white', 'black']),
   headerCategory: PropTypes.oneOf(['h1', 'h2', 'h3'])
 }

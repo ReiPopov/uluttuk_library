@@ -41,7 +41,7 @@ export const MenuMobile = (props) => {
       onClick={() => setActive(false)}
     >
       <div className={cls.blur}/>
-      <VStack className={cls.menu_content} gap={'16'}>
+      <VStack className={cls.menu_content} gap={'16'} onClick={(e) => e.stopPropagation()}>
         {linkButtons.map((link) => (
           <Link
             key={link.to}

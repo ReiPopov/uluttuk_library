@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import {SMALL_SCREEN} from "../../constants/constants";
 
 function getWindowDimensions() {
   const {innerWidth: width, innerHeight: height} = window;
@@ -22,5 +23,7 @@ export function useWindowDimensions() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return windowDimensions;
+  const isSmallScreen = windowDimensions.width < SMALL_SCREEN
+
+  return {...windowDimensions, isSmallScreen};
 }

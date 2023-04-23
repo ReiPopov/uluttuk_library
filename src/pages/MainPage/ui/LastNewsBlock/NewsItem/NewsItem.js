@@ -10,10 +10,9 @@ export const NewsItem = (props) => {
     <VStack className={cls.wrapper}>
       <img src={img} alt={img} className={cls.img}/>
       <div className={cls.contentInfo}>
-        <Text
-          text={text}/>
+        <Text size={'size_l'} text={text}/>
         <Button
-          size={'size_s'}
+          size={'size_m'}
           variant={'outline'}
           className={cls.btn}
         >

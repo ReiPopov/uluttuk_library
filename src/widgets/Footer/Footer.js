@@ -1,6 +1,6 @@
 import React from 'react';
 import cls from './Footer.module.scss'
-import {HStack, SMALL_SCREEN, Text, useWindowDimensions, VStack} from "../../shared";
+import {HStack, Text, useWindowDimensions, VStack} from "../../shared";
 import Logo from '../../shared/assets/icons/footer_logo.png'
 import Inst from '../../shared/assets/icons/instagram.svg'
 import Facebook from '../../shared/assets/icons/facebook.svg'
@@ -9,18 +9,16 @@ import {Flex} from "../../shared/ui/Stack/Flex/Flex";
 
 
 export const Footer = () => {
-  const {width} = useWindowDimensions()
-
-  const isSmallScreen = width > SMALL_SCREEN
+  const {isSmallScreen} = useWindowDimensions()
 
   return (
     <footer className={cls.footer}>
       <div className={'container'}>
-        <Flex justify={'center'} direction={isSmallScreen ? 'row' : 'column'} align={isSmallScreen ? 'start' : 'center'}
+        <Flex justify={'center'} direction={isSmallScreen ? 'column' : 'row'} align={isSmallScreen ? 'center' : 'start'}
               gap={'32'}>
-          <VStack align={isSmallScreen ? 'start' : 'center'}>
+          <VStack align={isSmallScreen ? 'center' : 'start'}>
             <Text color={'white'} size={'size_l'} title={'О библиотеке'} className={cls.title}/>
-            <VStack gap={'16'} align={isSmallScreen ? 'start' : 'center'} max>
+            <VStack gap={'16'} align={isSmallScreen ? 'center' : 'start'} max>
               <Text color={'white'} size={'size_l'} text={'История библиотеки'}/>
               <Text color={'white'} size={'size_l'} text={'Отдел ОДА'}/>
               <Text color={'white'} size={'size_l'} text={'Каталог диссертаций и авторефератов'}/>
@@ -35,16 +33,16 @@ export const Footer = () => {
               <img src={Vk} alt="vk" className={cls.icon}/>
             </HStack>
           </VStack>
-          <VStack align={isSmallScreen ? 'end' : 'center'}>
+          <VStack align={isSmallScreen ? 'center' : 'end'}>
             <Text color={'white'} size={'size_l'} title={'Контакты'} className={cls.title}/>
-            <VStack gap={'16'} align={isSmallScreen ? 'end' : 'center'}>
-              <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Адрес:'}
+            <VStack gap={'16'} align={isSmallScreen ? 'center' : 'end'}>
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Адрес:'}
                     text={'Кыргызстан, г. Бишкек, ул. Абдрахманова 208'}/>
-              <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Email:'}
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Email:'}
                     text={'library@nlkr.gov.kg'}/>
-              <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Телефон:'}
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Телефон:'}
                     text={'+996 (312) 30-46-75'}/>
-              <Text align={isSmallScreen ? 'right' : 'center'} color={'white'} title={'Факс:'}
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Факс:'}
                     text={'+996 (312) 30-46-88'}/>
 
             </VStack>

@@ -4,25 +4,21 @@ import cls from './Faq.module.scss'
 
 const faqs = [
   {
-    question: 'Question 1',
-    answer: 'Answer 1 Answer 1 Answer 1'
+    question: 'Сколько можно бронировать диссертаций?',
+    answer: 'Бронировать не более 3-х оригиналов диссертаций на 3 рабочих дня.'
   },
   {
-    question: 'Question 2',
-    answer: 'Answer 2 Answer 2 Answer 2'
+    question: 'Сколько можно копировать страниц диссертаций?',
+    answer: 'Копировать не более 30 листов с одного оригинала диссертации.'
   },
   {
-    question: 'Question 3',
-    answer: 'Answer 3 Answer 3 Answer 3'
+    question: 'Какой режим в Национальной библиотеки им. Осмонова ?',
+    answer: 'Национальная библиотека работает без выходных и перерывов с 9.00 до 18.00 ч., каждая последняя пятница месяца – санитарный день.'
   },
   {
-    question: 'Question 4',
-    answer: 'Answer 4 Answer 4 Answer 4'
-  },
-  {
-    question: 'Question 5',
-    answer: 'Answer 5 Answer 5 Answer 5'
-  },
+    question: 'С какого года представлены диссертации ?',
+    answer: 'В собрании представлены авторские экземпляры диссертаций с 1995г. по настоящее время.'
+  }
 ]
 
 export const Faq = () => {

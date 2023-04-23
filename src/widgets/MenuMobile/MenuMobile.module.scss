@@ -6,7 +6,7 @@
   top: 98px;
   transform: translateX(-140%);
   transition: all .2s;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .sidebar.active {
@@ -27,6 +27,7 @@
   height: 100%;
   padding: 10px;
   background: var(--primary-bg);
+  box-shadow: 10px -10px 10px -5px rgba(0, 0, 0, 1);
 }
 
 .link {
@@ -57,6 +58,7 @@
     width: 100%;
   }
   .blur {
+    backdrop-filter: none;
     display: none;
   }
 }

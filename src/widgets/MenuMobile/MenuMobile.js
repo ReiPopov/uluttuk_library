@@ -48,6 +48,7 @@ export const MenuMobile = (props) => {
             to={link.to}
             className={classNames(cls.link, {[cls.linkActive]: activeLinkBtn === link.to}, [])}
             onClick={() => {
+              window.scrollTo(0,0)
               setActive(false)
               setActiveLinkBtn(link.to)
             }}

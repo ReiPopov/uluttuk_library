@@ -95,8 +95,9 @@
       font: var(--font-s);
     }
   }
+}
 
-
+@media (max-width: 970px) {
   .size_xl {
     .title {
       font: var(--font-l);
@@ -107,9 +108,7 @@
       font: var(--font-m);
     }
   }
-}
 
-@media (max-width: 970px) {
   .size_m {
     .title {
       font: var(--font-s);

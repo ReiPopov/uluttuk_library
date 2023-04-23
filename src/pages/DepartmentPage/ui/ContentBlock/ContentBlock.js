@@ -1,5 +1,5 @@
 import React from 'react';
-import {classNames, Text, VStack} from "../../../../shared";
+import {classNames, Text} from "../../../../shared";
 import cls from './ContentBlock.module.scss'
 
 export const ContentBlock = () => {

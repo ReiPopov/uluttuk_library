@@ -1,0 +1,28 @@
+.wrapper {
+  padding-top: 60px;
+}
+
+.specialityWrapper {
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+
+.speciality {
+  width: 40%;
+  margin-bottom: 20px;
+  display: flex;
+  align-content: center;
+
+  &:hover {
+    & .icon, p {
+      color: var(--nav-link-btn-bg);
+    }
+
+  }
+}
+
+.icon {
+  color: #000;
+  margin: auto 10px auto 0;
+}

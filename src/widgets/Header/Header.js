@@ -3,8 +3,7 @@ import Logo from '../../shared/assets/icons/main_logo.png'
 import cls from './Header.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faLocationDot, faUser} from '@fortawesome/free-solid-svg-icons'
-import {Button, HStack, SMALL_SCREEN, Text, useWindowDimensions, VStack} from "../../shared";
-import {Link} from "react-router-dom";
+import {AppLink, Button, HStack, SMALL_SCREEN, Text, useWindowDimensions, VStack} from "../../shared";
 import PropTypes from "prop-types";
 
 export const Header = (props) => {
@@ -14,9 +13,9 @@ export const Header = (props) => {
   return (
     <header className={cls.header}>
       <HStack className={'container'} justify={'between'}>
-        <Link to={'/'}>
+        <AppLink to={'/'}>
           <img src={Logo} alt="logo" className={cls.logo}/>
-        </Link>
+        </AppLink>
         {width > SMALL_SCREEN && (
           <>
             <HStack gap={'16'}>

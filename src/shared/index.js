@@ -1,3 +1,4 @@
+export {AppLink} from "./ui/AppLink/AppLink";
 export {Accordion} from "./ui/Accordion/Accordion";
 export {useWindowDimensions} from "./lib/hooks/useWindowDimensions";
 export {Text} from "./ui/Text/Text";

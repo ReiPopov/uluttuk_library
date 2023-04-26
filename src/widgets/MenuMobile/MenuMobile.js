@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import cls from './MenuMobile.module.scss'
-import {classNames, HStack, Input, Text, VStack} from "../../shared";
+import {AppLink, classNames, HStack, Input, Text, VStack} from "../../shared";
 import PropTypes from "prop-types";
-import {Link, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {faLocationDot, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
@@ -43,18 +43,18 @@ export const MenuMobile = (props) => {
       <div className={cls.blur}/>
       <VStack className={cls.menu_content} gap={'16'} onClick={(e) => e.stopPropagation()}>
         {linkButtons.map((link) => (
-          <Link
+          <AppLink
             key={link.to}
             to={link.to}
             className={classNames(cls.link, {[cls.linkActive]: activeLinkBtn === link.to}, [])}
             onClick={() => {
-              window.scrollTo(0,0)
+              window.scrollTo(0, 0)
               setActive(false)
               setActiveLinkBtn(link.to)
             }}
           >
             <Text size={"size_l"} text={link.text}/>
-          </Link>
+          </AppLink>
         ))}
         <Input placeholder={'Поиск по сайту...'} icon={faMagnifyingGlass}/>
         <HStack gap={'8'}>

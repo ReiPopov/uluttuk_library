@@ -1,0 +1,29 @@
+.wrapper {
+  padding-top: 60px;
+}
+
+.contactItems {
+  margin-top: 60px;
+}
+
+.contactItem {
+  margin-right: 60px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.underlined {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.icon {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 970px) {
+ .contactItem {
+   margin-right: 0;
+ }
+}

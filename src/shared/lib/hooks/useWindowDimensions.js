@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {SMALL_SCREEN} from "../../constants/constants";
+import {EXTRA_SMALL, SMALL_SCREEN} from "../../constants/constants";
 
 function getWindowDimensions() {
   const {innerWidth: width, innerHeight: height} = window;
@@ -24,6 +24,7 @@ export function useWindowDimensions() {
   }, []);
 
   const isSmallScreen = windowDimensions.width < SMALL_SCREEN
+  const isExtraSmallScreen = windowDimensions.width < EXTRA_SMALL
 
-  return {...windowDimensions, isSmallScreen};
+  return {...windowDimensions, isSmallScreen, isExtraSmallScreen};
 }

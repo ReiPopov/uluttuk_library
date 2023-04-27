@@ -1,0 +1,28 @@
+.textareaWrapper {
+  width: 100%;
+  display: inherit;
+}
+.textarea {
+  resize: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 40px 5px 15px;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+}
+
+.background {
+  color: #fff;
+  background: var(--primary-bg);
+}
+
+.primary {
+  background: #fff;
+}
+
+@media (max-width: 970px) {
+  .textarea, .textarea::placeholder {
+    font-size: 16px;
+  }
+}

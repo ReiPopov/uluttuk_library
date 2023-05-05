@@ -4,6 +4,11 @@
 
 .login_btn {
   width: 100%;
+  transition: background-color .2s linear;
+  &:hover {
+    opacity: 1;
+    background: var(--orange);
+  }
 }
 
 .input {

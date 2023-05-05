@@ -44,8 +44,9 @@
   // colors
   --primary-bg: #2F2F2F;
   --secondary-bg: #1C1C1C;
+  --orange: #FF9B3F;
   --nav-link-bg: #FED557;
-  --nav-link-btn-bg: #FF9B3F;
+  --nav-link-btn-bg: var(--orange);
   --footer-copiright-bg: var(--secondary-bg);
   --auth-bg: var(--secondary-bg)
 }

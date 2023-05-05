@@ -12,6 +12,7 @@ export const Text = memo(function Text(props) {
     size = 'size_m',
     color = 'black',
     headerCategory = 'h3',
+    ...rest
   } = props
 
   const additional = [className, cls[align], cls[size]]
@@ -19,7 +20,7 @@ export const Text = memo(function Text(props) {
   const HeaderTag = headerCategory
 
   return (
-    <div style={{color}} className={classNames('', {}, additional)}>
+    <div {...rest} style={{color}} className={classNames('', {}, additional)}>
       {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
       {text && <p className={cls.text}>{text}</p>}
     </div>

@@ -57,6 +57,7 @@ export const MenuMobile = (props) => {
           </AppLink>
         ))}
         <Input placeholder={'Поиск по сайту...'} icon={faMagnifyingGlass}/>
+        <AppLink to={'/auth'}>Войти</AppLink>
         <HStack gap={'8'}>
           <FontAwesomeIcon size={'xl'} icon={faLocationDot} className={cls.icon}/>
           <VStack gap={'4'}>

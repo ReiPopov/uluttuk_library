@@ -1,0 +1,6 @@
+.checkboxWrapper {
+  cursor: pointer;
+  & > * {
+    cursor: pointer;
+  }
+}

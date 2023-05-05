@@ -1,0 +1,28 @@
+.register_form {
+  width: 500px;
+}
+
+.register_btn {
+  width: 100%;
+}
+
+.input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 970px) {
+  .register_form {
+    width: 350px;
+  }
+  .input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .register_form {
+    width: 100%;
+  }
+}

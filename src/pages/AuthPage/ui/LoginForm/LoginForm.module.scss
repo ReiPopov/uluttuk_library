@@ -1,0 +1,32 @@
+.login_form {
+  width: 500px;
+}
+
+.login_btn {
+  width: 100%;
+}
+
+.input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.remember_me {
+  cursor: pointer;
+}
+
+@media (max-width: 970px) {
+  .login_form {
+    width: 350px;
+  }
+  .input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .login_form {
+    width: 100%;
+  }
+}

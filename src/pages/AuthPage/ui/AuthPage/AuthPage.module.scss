@@ -1,0 +1,13 @@
+.authPage {
+  background: var(--auth-bg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.tabButton {
+  font-weight: bold;
+}

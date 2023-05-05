@@ -34,7 +34,7 @@ export const Header = (props) => {
               <Button size={"size_m"}>RU</Button>
               <Button size={"size_m"}>ENG</Button>
             </VStack>
-            <Button size={"size_m"}>Войти</Button>
+            <AppLink to={'/auth'}>Войти</AppLink>
           </>)
         }
         {

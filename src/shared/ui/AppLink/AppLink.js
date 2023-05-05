@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 
+import cls from './AppLink.module.scss'
+import {classNames} from "../../lib/classNames/classNames";
+
 export const AppLink = (props) => {
   const {children, className, onClick, to} = props
 
@@ -10,7 +13,7 @@ export const AppLink = (props) => {
   }
 
   return (
-    <Link to={to} onClick={_onClick} className={className}>
+    <Link to={to} onClick={_onClick} className={classNames(cls.link, {}, [className])}>
       {children}
     </Link>
   )

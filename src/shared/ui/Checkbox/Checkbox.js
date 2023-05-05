@@ -7,7 +7,7 @@ import {useState} from "react";
 
 export const Checkbox = (props) => {
 
-  const {className, checked, onChange, label, size} = props
+  const {className, checked, label, size} = props
 
   const [isChecked, setIsChecked] = useState(checked || false)
 

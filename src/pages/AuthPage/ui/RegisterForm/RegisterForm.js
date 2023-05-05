@@ -8,7 +8,7 @@ export const RegisterForm = () => {
         <Input required type={'email'} placeholder={'Введите Email'} className={cls.input}/>
         <Input required type={'password'} placeholder={'Введите пароль'} className={cls.input}/>
         <Input required type={'password'} placeholder={'Повторите пароль'} className={cls.input}/>
-        <Button className={cls.register_btn} variant={'outline'}>Регистрация</Button>
+        <Button className={cls.register_btn} variant={'outline'}>РЕГИСТРАЦИЯ</Button>
       </VStack>
     </form>
   )

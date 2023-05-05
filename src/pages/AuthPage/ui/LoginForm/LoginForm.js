@@ -9,7 +9,7 @@ export const LoginForm = () => {
         <Input required type={'email'} placeholder={'Введите Email'} className={cls.input}/>
         <Input required type={'password'} placeholder={'Введите пароль'} className={cls.input}/>
         <Checkbox label={'Запомнить меня'} size={20}/>
-        <Button className={cls.login_btn} variant={'outline'}>Войти</Button>
+        <Button className={cls.login_btn} variant={'outline'}>ВОЙТИ</Button>
       </VStack>
     </form>
   )

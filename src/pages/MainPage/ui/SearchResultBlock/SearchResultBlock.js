@@ -48,7 +48,7 @@ export const SearchResultBlock = ({searchValue}) => {
 
   return (
     <div className={'container'}>
-      <Text align={'center'} size={'size_l'} title={`Результаты для поиска: ${searchValue}`} className={cls.title}/>
+      <Text align={'center'} size={'size_l'} title={`Результаты поиска для: ${searchValue}`} className={cls.title}/>
       {dissertations.length ? (
         <DissertationList dissertations={dissertations}/>
       ) : <Text size={'size_m'} title={'К сожалению, поиск не дал результатов.'}/>}

@@ -1,6 +1,6 @@
 import Img from '../../../../shared/assets/content/content_img4.png'
 import PropTypes from "prop-types";
-import {AppLink, HStack, Text, useWindowDimensions, VStack} from "../../../../shared";
+import {AppLink, HStack, Text, VStack} from "../../../../shared";
 import cls from './DissertationItem.module.scss'
 import {Flex} from "../../../../shared/ui/Stack/Flex/Flex";
 

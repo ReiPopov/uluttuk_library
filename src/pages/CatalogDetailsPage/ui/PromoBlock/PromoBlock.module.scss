@@ -1,0 +1,19 @@
+.promo {
+  background: var(--catalog_page_bg_image) no-repeat center;
+  background-size: cover;
+  height: 570px;
+}
+
+@media (max-width: 1200px) {
+  .promo {
+    height: 350px;
+  }
+}
+
+@media (max-width: 970px) {
+  .promo {
+    background: var(--header-bg-image) no-repeat center;
+    background-size: cover;
+    height: 200px;
+  }
+}

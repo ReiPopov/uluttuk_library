@@ -1,0 +1,33 @@
+.dissertationItem {
+  flex-direction: row;
+}
+
+.img {
+  width: auto;
+  height: auto;
+}
+
+.link {
+  color: var(--orange) !important;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .img {
+    width: 200px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dissertationItem {
+    flex-direction: column;
+  }
+  .img {
+    width: 150px;
+    height: 200px;
+  }
+}

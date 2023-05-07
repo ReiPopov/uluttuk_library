@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import cls from './MenuMobile.module.scss'
-import {AppLink, classNames, HStack, Input, Text, VStack} from "../../shared";
+import {AppLink, classNames, HStack, Text, VStack} from "../../shared";
 import PropTypes from "prop-types";
 import {useLocation} from "react-router-dom";
-import {faLocationDot, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faLocationDot, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {CatalogSearchInput} from "../../features";
 

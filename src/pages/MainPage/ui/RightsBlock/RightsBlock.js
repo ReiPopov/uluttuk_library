@@ -25,8 +25,8 @@ export const RightsBlock = () => {
         <Text size={'size_l'} align={'center'} title={'Пользователь библиотеки имеет право '}/>
         <HStack className={cls.infoBlock}>
           <VStack gap={'32'}>
-            {texts.map(text => (
-              <Text size={'size_l'} text={text} className={cls.text}/>
+            {texts.map((text, index) => (
+              <Text key={index} size={'size_l'} text={text} className={cls.text}/>
             ))}
           </VStack>
           <img src={StudentIcon} alt={'book'} className={cls.image}/>

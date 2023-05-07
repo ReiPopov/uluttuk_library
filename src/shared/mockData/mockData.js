@@ -1,4 +1,4 @@
-export const SPECIALTIES = [
+export const CATALOGS = [
   {
     id: 1,
     name: 'Физика и математика',

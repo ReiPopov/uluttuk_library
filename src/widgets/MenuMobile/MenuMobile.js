@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import {useLocation} from "react-router-dom";
 import {faLocationDot, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {CatalogSearchInput} from "../../features";
 
 const linkButtons = [
   {
@@ -56,7 +57,7 @@ export const MenuMobile = (props) => {
             <Text size={"size_l"} text={link.text}/>
           </AppLink>
         ))}
-        <Input placeholder={'Поиск по сайту...'} icon={faMagnifyingGlass}/>
+        <CatalogSearchInput onSubmit={() => setActive(false)}/>
         <AppLink to={'/auth'}>Войти</AppLink>
         <HStack gap={'8'}>
           <FontAwesomeIcon size={'xl'} icon={faLocationDot} className={cls.icon}/>

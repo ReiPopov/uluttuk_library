@@ -1,16 +1,10 @@
 import React, {useState} from 'react';
 import cls from './NavBar.module.scss'
-import {HStack, Input} from "../../../../shared";
-import {
-  faBookOpen,
-  faBuildingColumns,
-  faEnvelope,
-  faGraduationCap,
-  faHouse,
-  faMagnifyingGlass
-} from "@fortawesome/free-solid-svg-icons";
+import {HStack} from "../../../../shared";
+import {faBookOpen, faBuildingColumns, faEnvelope, faGraduationCap, faHouse} from "@fortawesome/free-solid-svg-icons";
 import {NavBarLinkButton} from "../NavBarButton/NavBarLinkButton";
 import {useLocation} from "react-router-dom";
+import {CatalogSearchInput} from "../../../../features";
 
 const linkButtons = [
   {
@@ -47,7 +41,7 @@ export const NavBar = () => {
   return (
     <HStack className={cls.navbar}>
       <HStack justify={'between'} gap={'32'} className={'container'}>
-        <Input placeholder={'Поиск по сайту...'} icon={faMagnifyingGlass}/>
+        <CatalogSearchInput/>
         <HStack gap={'16'}>
           {linkButtons.map((item) =>
             <NavBarLinkButton

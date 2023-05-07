@@ -12,6 +12,6 @@ VStack.propTypes = {
   justify: PropTypes.oneOf(['start', 'center', 'end', 'between']),
   align: PropTypes.oneOf(['start', 'center', 'end']),
   direction: PropTypes.oneOf(['row', 'column']),
-  gap: PropTypes.oneOf(['4', '8', '16', '32']),
+  gap: PropTypes.oneOf(['4', '8', '16', '32', '64']),
   max: PropTypes.bool
 };

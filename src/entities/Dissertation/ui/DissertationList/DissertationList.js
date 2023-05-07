@@ -4,9 +4,9 @@ import {DissertationItem} from "../DissertationItem/DissertationItem";
 
 export const DissertationList = ({dissertations}) => {
   return (
-    <VStack gap={'32'}>
+    <VStack gap={'64'}>
       {dissertations.map(dissertation => (
-        <DissertationItem dissertation={dissertation}/>
+        <DissertationItem key={dissertation.storage_cipher} dissertation={dissertation}/>
       ))}
     </VStack>
   )

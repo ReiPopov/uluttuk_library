@@ -25,7 +25,8 @@ const gapClasses = {
   4: cls.gap4,
   8: cls.gap8,
   16: cls.gap16,
-  32: cls.gap32
+  32: cls.gap32,
+  64: cls.gap64
 }
 
 export const Flex = (props) => {
@@ -61,6 +62,6 @@ Flex.propTypes = {
   justify: PropTypes.oneOf(['start', 'center', 'end', 'between']),
   align: PropTypes.oneOf(['start', 'center', 'end']),
   direction: PropTypes.oneOf(['row', 'column']),
-  gap: PropTypes.oneOf(['4', '8', '16', '32']),
+  gap: PropTypes.oneOf(['4', '8', '16', '32', '64']),
   max: PropTypes.bool
 };

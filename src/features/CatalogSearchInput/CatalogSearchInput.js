@@ -17,7 +17,7 @@ export const CatalogSearchInput = ({onSubmit}) => {
       });
       onSubmit()
     }
-  }, [navigate, search])
+  }, [navigate, onSubmit, search])
 
 
   return (

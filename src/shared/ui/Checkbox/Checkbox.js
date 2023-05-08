@@ -16,7 +16,7 @@ export const Checkbox = (props) => {
 
   return (
     <HStack gap={'8'} onClick={toggleChecked} className={classNames(cls.checkboxWrapper, {}, [className])}>
-      <input style={{width: size, height: size}} checked={isChecked} type="checkbox"/>
+      <input style={{width: size, height: size}} checked={isChecked} onChange={toggleChecked} type="checkbox"/>
       {label && <Text
         color={'white'}
         text={label}

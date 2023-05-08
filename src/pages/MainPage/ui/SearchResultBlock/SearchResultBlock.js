@@ -9,7 +9,11 @@ const searchDissertationsByValue = (value) => new Promise(resolve => {
   setTimeout(() => {
     const _value = value.toLowerCase()
     const catalogDissertations = CATALOGS.map(c => c.dissertations.length ? c.dissertations : null).filter(Boolean).flat()
-    const catalogsByName = CATALOGS.filter(c => c.name.toLowerCase().includes(_value)).map(c => c.dissertations.length ? c.dissertations : null).filter(Boolean).flat()
+    const catalogsByName = CATALOGS
+      .filter(c => c.name.toLowerCase().includes(_value))
+      .map(c => c.dissertations.length ? c.dissertations : null)
+      .filter(Boolean)
+      .flat()
     const catalogsByAuthor = catalogDissertations.filter((c) => c.author.toLowerCase().includes(_value))
     const catalogsByStorageCipher = catalogDissertations.filter(c => c.storage_cipher.toLowerCase().includes(_value))
     const catalogsByText = catalogDissertations.filter(c => c.text.toLowerCase().includes(_value))
@@ -35,7 +39,9 @@ export const SearchResultBlock = ({searchValue}) => {
 
   useEffect(() => {
     setLoading(true)
-    searchDissertationsByValue(searchValue).then(resp => setDissertations(resp.list)).finally(() => setLoading(false))
+    searchDissertationsByValue(searchValue)
+      .then(resp => setDissertations(resp.list))
+      .finally(() => setLoading(false))
   }, [searchValue])
 
   if (loading) {

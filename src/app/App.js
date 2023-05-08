@@ -37,7 +37,7 @@ function App() {
     <div className={'page'} style={{display: isAuthPage ? 'none' : 'block'}}>
       <Header toggle={toggle}/>
       {isSmallScreen
-        ? <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>
+        ? <MenuMobile pathname={pathname} active={sidebarActive} setActive={setSidebarActive}/>
         : <NavBar pathname={pathname}/>
       }
       <Suspense fallback={<div className={'container'}>Загрузка...</div>}>

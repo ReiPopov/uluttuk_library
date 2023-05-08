@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import cls from './MenuMobile.module.scss'
 import {AppLink, classNames, HStack, Text, VStack} from "../../shared";
 import PropTypes from "prop-types";
-import {useLocation} from "react-router-dom";
 import {faLocationDot, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {CatalogSearchInput} from "../../features";
@@ -33,11 +32,9 @@ const linkButtons = [
 ]
 
 export const MenuMobile = (props) => {
-  const {active, setActive} = props
+  const {active, setActive, pathname} = props
   const {t} = useTranslation()
 
-  const {pathname} = useLocation()
-  const [activeLinkBtn, setActiveLinkBtn] = useState(pathname)
 
   return (
     <div
@@ -50,11 +47,10 @@ export const MenuMobile = (props) => {
           <AppLink
             key={link.to}
             to={link.to}
-            className={classNames(cls.link, {[cls.linkActive]: activeLinkBtn === link.to}, [])}
+            className={classNames(cls.link, {[cls.linkActive]: pathname === link.to}, [])}
             onClick={() => {
               window.scrollTo(0, 0)
               setActive(false)
-              setActiveLinkBtn(link.to)
             }}
           >
             <Text size={"size_l"} text={t(link.text)}/>
@@ -88,5 +84,6 @@ export const MenuMobile = (props) => {
 
 MenuMobile.propTypes = {
   active: PropTypes.bool,
-  setActive: PropTypes.func
+  setActive: PropTypes.func,
+  pathname: PropTypes.string
 }

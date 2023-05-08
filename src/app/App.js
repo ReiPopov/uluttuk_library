@@ -11,6 +11,7 @@ import {AuthPage} from "../pages/AuthPage";
 import {CatalogDetailsPage} from "../pages/CatalogDetailsPage";
 import {NotFoundPage} from "../pages/NotFoundPage";
 import {NewsDetailsPage} from "../pages/NewsDetailsPage";
+import {BackToTopButton} from "../widgets/BackToTopButton/BackToTopButton";
 
 function App() {
   const {width} = useWindowDimensions()
@@ -52,6 +53,7 @@ function App() {
         </main>
         <Footer/>
       </Suspense>
+      <BackToTopButton/>
     </div>
   );
 }

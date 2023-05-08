@@ -23,26 +23,50 @@ export const Footer = () => {
             <Text color={'white'} size={'size_l'} title={t('about_library')} className={cls.title}/>
             <VStack gap={'16'} align={isSmallScreen ? 'center' : 'start'} max>
               <AppLink to={'/about'} className={cls.link}>
-                <Text color={'white'} size={'size_l'} text={t('history_of_library')}/>
+                <Text
+                  align={isSmallScreen ? 'center' : 'left'}
+                  color={'white'}
+                  size={'size_l'}
+                  text={t('history_of_library')}
+                />
               </AppLink>
               <AppLink to={'/department'} className={cls.link}>
-                <Text color={'white'} size={'size_l'} text={t('department_oda')}/>
+                <Text
+                  align={isSmallScreen ? 'center' : 'left'}
+                  color={'white'}
+                  size={'size_l'}
+                  text={t('department_oda')}
+                />
               </AppLink>
               <AppLink to={'/catalog'} className={cls.link}>
-                <Text color={'white'} size={'size_l'}
-                      text={t('catalog_of_dissertations_and_abstracts')}/>
+                <Text
+                  align={isSmallScreen ? 'center' : 'left'}
+                  color={'white'} size={'size_l'}
+                  text={t('catalog_of_dissertations_and_abstracts')}
+                />
               </AppLink>
               <AppLink to={'/'} className={cls.link}>
-                <Text color={'white'} size={'size_l'} text={t('news')}/>
+                <Text
+                  align={isSmallScreen ? 'center' : 'left'}
+                  color={'white'}
+                  size={'size_l'}
+                  text={t('news')}
+                />
               </AppLink>
             </VStack>
           </VStack>
-          <VStack align={'center'}>
+          <VStack align={'center'} gap={'8'}>
             <img src={Logo} alt="footer_logo" className={cls.logo}/>
             <HStack>
-              <img src={Facebook} alt="facebook" className={cls.icon}/>
-              <img src={Inst} alt="instagram" className={cls.icon}/>
-              <img src={Vk} alt="vk" className={cls.icon}/>
+              <AppLink scrollToTop={false} target={'_blank'} to={'https://ru-ru.facebook.com/libkr/'}>
+                <img src={Facebook} alt="facebook" className={cls.icon}/>
+              </AppLink>
+              <AppLink scrollToTop={false} target={'_blank'} to={'https://www.instagram.com/nationallibrary.kg/?hl=ru'}>
+                <img src={Inst} alt="instagram" className={cls.icon}/>
+              </AppLink>
+              <AppLink scrollToTop={false} target={'_blank'} to={'https://www.vk.com'}>
+                <img src={Vk} alt="vk" className={cls.icon}/>
+              </AppLink>
             </HStack>
           </VStack>
           <VStack align={isSmallScreen ? 'center' : 'end'}>
@@ -50,12 +74,29 @@ export const Footer = () => {
             <VStack gap={'16'} align={isSmallScreen ? 'center' : 'end'}>
               <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('address')}:`}
                     text={`${t('country_city')}, ${t('street')}`}/>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Email:'}
-                    text={'library@nlkr.gov.kg'}/>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('phone')}:`}
-                    text={'+996 (312) 30-46-75'}/>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('fax')}:`}
-                    text={'+996 (312) 30-46-88'}/>
+              <AppLink scrollToTop={false} to={'mailto:library@nlkr.gov.kg'} className={cls.link}>
+                <Text
+                  align={isSmallScreen ? 'center' : 'right'} color={'white'}
+                  title={'Email:'}
+                  text={'library@nlkr.gov.kg'}
+                />
+              </AppLink>
+              <AppLink scrollToTop={false} to={'tel:+996(312)304675'} className={cls.link}>
+                <Text
+                  align={isSmallScreen ? 'center' : 'right'}
+                  color={'white'}
+                  title={`${t('phone')}:`}
+                  text={'+996 (312) 30-46-75'}
+                />
+              </AppLink>
+              <AppLink scrollToTop={false} to={'tel:+996(312)304688'} className={cls.link}>
+                <Text
+                  align={isSmallScreen ? 'center' : 'right'}
+                  color={'white'}
+                  title={`${t('fax')}:`}
+                  text={'+996 (312) 30-46-88'}
+                />
+              </AppLink>
 
             </VStack>
           </VStack>

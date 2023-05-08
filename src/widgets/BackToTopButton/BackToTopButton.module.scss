@@ -1,0 +1,17 @@
+.button {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  z-index: 10;
+}
+
+@media (max-width: 970px) {
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -72,8 +72,12 @@ export const MenuMobile = (props) => {
         <HStack gap={'8'}>
           <FontAwesomeIcon size={'xl'} icon={faUser} className={cls.icon}/>
           <VStack gap={'4'}>
-            <Text color={'white'} size={'size_l'} text={`${t('phone_short')}: +996 (312) 30-46-75`}/>
-            <Text color={'white'} size={'size_l'} text={`${t('fax')}: +996 (312) 30-46-88`}/>
+            <AppLink scrollToTop={false} to={'tel:+996(312)304675'} className={cls.tel}>
+              <Text color={'white'} size={'size_l'} text={`${t('phone_short')}: +996 (312) 30-46-75`}/>
+            </AppLink>
+            <AppLink scrollToTop={false} to={'tel:+996(312)304688'} className={cls.tel}>
+              <Text color={'white'} size={'size_l'} text={`${t('fax')}: +996 (312) 30-46-88`}/>
+            </AppLink>
           </VStack>
         </HStack>
         <LangSwitcher/>

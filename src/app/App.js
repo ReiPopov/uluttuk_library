@@ -34,10 +34,10 @@ function App() {
 
   return (
     <div className={'page'} style={{display: isAuthPage ? 'none' : 'block'}}>
-      <Header toggle={toggle}/>
-      {width > SMALL_SCREEN ? <NavBar/> : <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>}
-      <main className={'main'}>
-        <Suspense fallback={<div className={'container'}>Загрузка...</div>}>
+      <Suspense fallback={<div className={'container'}>Загрузка...</div>}>
+        <Header toggle={toggle}/>
+        {width > SMALL_SCREEN ? <NavBar/> : <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>}
+        <main className={'main'}>
           <Routes>
             <Route path={'/'} element={<MainPage/>}/>
             <Route path={'/about'} element={<AboutPage/>}/>
@@ -49,9 +49,9 @@ function App() {
             <Route path={'/auth'} element={<AuthPage/>}/>
             <Route path={'*'} element={<NotFoundPage/>}/>
           </Routes>
-        </Suspense>
-      </main>
-      <Footer/>
+        </main>
+        <Footer/>
+      </Suspense>
     </div>
   );
 }

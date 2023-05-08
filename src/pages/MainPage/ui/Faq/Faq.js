@@ -1,31 +1,33 @@
 import React from 'react';
 import {Accordion, Text} from "../../../../shared";
 import cls from './Faq.module.scss'
+import {useTranslation} from "react-i18next";
 
 const faqs = [
   {
-    question: 'Сколько можно бронировать диссертаций?',
-    answer: 'Бронировать не более 3-х оригиналов диссертаций на 3 рабочих дня.'
+    question: 'main_page_faq_question1',
+    answer: 'main_page_faq_answer1'
   },
   {
-    question: 'Сколько можно копировать страниц диссертаций?',
-    answer: 'Копировать не более 30 листов с одного оригинала диссертации.'
+    question: 'main_page_faq_question2',
+    answer: 'main_page_faq_answer2'
   },
   {
-    question: 'Какой режим в Национальной библиотеки им. Осмонова ?',
-    answer: 'Национальная библиотека работает без выходных и перерывов с 9.00 до 18.00 ч., каждая последняя пятница месяца – санитарный день.'
+    question: 'main_page_faq_question3',
+    answer: 'main_page_faq_answer3'
   },
   {
-    question: 'С какого года представлены диссертации ?',
-    answer: 'В собрании представлены авторские экземпляры диссертаций с 1995г. по настоящее время.'
+    question: 'main_page_faq_question4',
+    answer: 'main_page_faq_answer4'
   }
 ]
 
 export const Faq = () => {
+  const {t} = useTranslation()
   return (
     <div className={'container'}>
       <div className={cls.wrapper}>
-        <Text size={'size_l'} align={'center'} title={'Часто задаваемые вопросы'}/>
+        <Text size={'size_l'} align={'center'} title={t('main_page_faq_title')}/>
         <Accordion data={faqs} className={cls.accordion}/>
       </div>
     </div>

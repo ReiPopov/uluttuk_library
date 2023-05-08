@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import cls from './NavBarLinkButton.module.scss'
 import {AppLink, classNames, MEDIUM_SCREEN, Text, useWindowDimensions} from "../../../../shared";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useTranslation} from "react-i18next";
 
 export const NavBarLinkButton = memo(function NavBarLinkButton(props) {
   const {
@@ -15,10 +16,12 @@ export const NavBarLinkButton = memo(function NavBarLinkButton(props) {
     active
   } = props
   const {width} = useWindowDimensions()
+  const {t} = useTranslation()
+
   return (
     <AppLink to={to} onClick={onClick} className={classNames(cls.navBarLink, {[cls.active]: active}, [className])}>
       <FontAwesomeIcon icon={icon} className={cls.icon}/>
-      <Text text={text} size={width > MEDIUM_SCREEN ? 'size_m' : 'size_s'} className={cls.text}/>
+      <Text text={t(text)} size={width > MEDIUM_SCREEN ? 'size_m' : 'size_s'} className={cls.text}/>
     </AppLink>
   );
 })

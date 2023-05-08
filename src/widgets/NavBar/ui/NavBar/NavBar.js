@@ -9,27 +9,27 @@ import {CatalogSearchInput} from "../../../../features";
 const linkButtons = [
   {
     to: '/',
-    text: 'Главная',
+    text: 'main',
     icon: faHouse
   },
   {
     to: '/about',
-    text: 'О библиотеке',
+    text: 'about',
     icon: faBuildingColumns
   },
   {
     to: '/catalog',
-    text: 'Каталог',
+    text: 'catalog',
     icon: faBookOpen
   },
   {
     to: '/department',
-    text: 'Отдел ДиА',
+    text: 'department',
     icon: faGraduationCap
   },
   {
     to: '/contacts',
-    text: 'Контакты',
+    text: 'contacts',
     icon: faEnvelope
   },
 ]

@@ -4,8 +4,10 @@ import {Text, VStack} from "../../../../../shared";
 import cls from './NewsItem.module.scss'
 import PropTypes from "prop-types";
 import {LinkButton} from "../../../../../shared/ui/LinkButton/LinkButton";
+import {useTranslation} from "react-i18next";
 
 export const NewsItem = ({item}) => {
+  const {t} = useTranslation()
   return (
     <VStack className={cls.wrapper}>
       <img src={item.images[0]} alt={'news_image'} className={cls.img}/>
@@ -17,7 +19,7 @@ export const NewsItem = ({item}) => {
           className={cls.btn}
           to={`news/${item.id}`}
         >
-          Читать полностью
+          {t('read_completely')}
         </LinkButton>
       </div>
     </VStack>

@@ -6,32 +6,35 @@ import {useLocation} from "react-router-dom";
 import {faLocationDot, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {CatalogSearchInput} from "../../features";
+import {useTranslation} from "react-i18next";
+import {LangSwitcher} from "../LangSwitcher/LangSwitcher";
 
 const linkButtons = [
   {
     to: '/',
-    text: 'Главная',
+    text: 'main',
   },
   {
     to: '/about',
-    text: 'О библиотеке',
+    text: 'about',
   },
   {
     to: '/catalog',
-    text: 'Каталог',
+    text: 'catalog',
   },
   {
     to: '/department',
-    text: 'Отдел ДиА',
+    text: 'department',
   },
   {
     to: '/contacts',
-    text: 'Контакты',
+    text: 'contacts',
   },
 ]
 
 export const MenuMobile = (props) => {
   const {active, setActive} = props
+  const {t} = useTranslation()
 
   const {pathname} = useLocation()
   const [activeLinkBtn, setActiveLinkBtn] = useState(pathname)
@@ -54,25 +57,26 @@ export const MenuMobile = (props) => {
               setActiveLinkBtn(link.to)
             }}
           >
-            <Text size={"size_l"} text={link.text}/>
+            <Text size={"size_l"} text={t(link.text)}/>
           </AppLink>
         ))}
         <CatalogSearchInput onSubmit={() => setActive(false)}/>
-        <AppLink to={'/auth'}>Войти</AppLink>
+        <AppLink to={'/auth'}>{t('login')}</AppLink>
         <HStack gap={'8'}>
           <FontAwesomeIcon size={'xl'} icon={faLocationDot} className={cls.icon}/>
           <VStack gap={'4'}>
-            <Text color={'white'} size={'size_l'} text={'Кыргызстан, г. Бишкек,'}/>
-            <Text color={'white'} size={'size_l'} text={'ул. Абдрахманова 208'}/>
+            <Text color={'white'} size={'size_l'} text={t('country_city')}/>
+            <Text color={'white'} size={'size_l'} text={t('street')}/>
           </VStack>
         </HStack>
         <HStack gap={'8'}>
           <FontAwesomeIcon size={'xl'} icon={faUser} className={cls.icon}/>
           <VStack gap={'4'}>
-            <Text color={'white'} size={'size_l'} text={'Тел.: +996 (312) 30-46-75'}/>
-            <Text color={'white'} size={'size_l'} text={'Факс: +996 (312) 30-46-88'}/>
+            <Text color={'white'} size={'size_l'} text={`${t('phone_short')}: +996 (312) 30-46-75`}/>
+            <Text color={'white'} size={'size_l'} text={`${t('fax')}: +996 (312) 30-46-88`}/>
           </VStack>
         </HStack>
+        <LangSwitcher/>
       </VStack>
     </div>
   );

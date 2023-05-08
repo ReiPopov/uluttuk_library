@@ -6,11 +6,13 @@ import Inst from '../../shared/assets/icons/instagram.svg'
 import Facebook from '../../shared/assets/icons/facebook.svg'
 import Vk from '../../shared/assets/icons/vk.svg'
 import {Flex} from "../../shared/ui/Stack/Flex/Flex";
+import {useTranslation} from "react-i18next";
 
 const currentYear = new Date().getFullYear()
 
 export const Footer = () => {
   const {isSmallScreen} = useWindowDimensions()
+  const {t} = useTranslation()
 
   return (
     <footer className={cls.footer}>
@@ -18,23 +20,21 @@ export const Footer = () => {
         <Flex justify={'center'} direction={isSmallScreen ? 'column' : 'row'} align={isSmallScreen ? 'center' : 'start'}
               gap={'32'}>
           <VStack align={isSmallScreen ? 'center' : 'start'}>
-            <Text color={'white'} size={'size_l'} title={'О библиотеке'} className={cls.title}/>
+            <Text color={'white'} size={'size_l'} title={t('about_library')} className={cls.title}/>
             <VStack gap={'16'} align={isSmallScreen ? 'center' : 'start'} max>
-              <AppLink to={'/about'}>
-                <Text color={'white'} size={'size_l'} text={'История библиотеки'}/>
+              <AppLink to={'/about'} className={cls.link}>
+                <Text color={'white'} size={'size_l'} text={t('history_of_library')}/>
               </AppLink>
-              <AppLink to={'/department'}>
-                <Text color={'white'} size={'size_l'} text={'Отдел ОДА'}/>
+              <AppLink to={'/department'} className={cls.link}>
+                <Text color={'white'} size={'size_l'} text={t('department_oda')}/>
               </AppLink>
-              <AppLink to={'/catalog'}>
+              <AppLink to={'/catalog'} className={cls.link}>
                 <Text color={'white'} size={'size_l'}
-                      text={'Каталог диссертаций и авторефератов'}/>
+                      text={t('catalog_of_dissertations_and_abstracts')}/>
               </AppLink>
-              <AppLink to={'/'}>
-                <Text color={'white'} size={'size_l'} text={'Новости'}/>
+              <AppLink to={'/'} className={cls.link}>
+                <Text color={'white'} size={'size_l'} text={t('news')}/>
               </AppLink>
-
-
             </VStack>
           </VStack>
           <VStack align={'center'}>
@@ -46,15 +46,15 @@ export const Footer = () => {
             </HStack>
           </VStack>
           <VStack align={isSmallScreen ? 'center' : 'end'}>
-            <Text color={'white'} size={'size_l'} title={'Контакты'} className={cls.title}/>
+            <Text color={'white'} size={'size_l'} title={t('contacts')} className={cls.title}/>
             <VStack gap={'16'} align={isSmallScreen ? 'center' : 'end'}>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Адрес:'}
-                    text={'Кыргызстан, г. Бишкек, ул. Абдрахманова 208'}/>
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('address')}:`}
+                    text={`${t('country_city')}, ${t('street')}`}/>
               <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Email:'}
                     text={'library@nlkr.gov.kg'}/>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Телефон:'}
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('phone')}:`}
                     text={'+996 (312) 30-46-75'}/>
-              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={'Факс:'}
+              <Text align={isSmallScreen ? 'center' : 'right'} color={'white'} title={`${t('fax')}:`}
                     text={'+996 (312) 30-46-88'}/>
 
             </VStack>
@@ -68,14 +68,14 @@ export const Footer = () => {
             className={cls.footer_copyright_text}
             align={'center'}
             color={'white'}
-            text={'Отдел диссертаций Национальной Библиотеки Кыргызской Республики имени Алыкула Осмонова'}
+            text={t('footer_copyright_text1')}
           />
           <Text
             size={'size_l'}
             className={cls.footer_copyright_text}
             align={'center'}
             color={'white'}
-            text={`©️${currentYear} Все права защищены`}
+            text={`©️${currentYear} ${t('footer_copyright_text2')}`}
           />
         </div>
       </div>

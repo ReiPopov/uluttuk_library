@@ -16,10 +16,17 @@
   }
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 760px) {
   .img {
-    width: 100%;
+    width: 200px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 440px) {
+  .img {
+    width: 140px;
+    height: 107px;
   }
 }
 

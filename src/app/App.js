@@ -37,7 +37,7 @@ function App() {
       <Header toggle={toggle}/>
       {width > SMALL_SCREEN ? <NavBar/> : <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>}
       <main className={'main'}>
-        <Suspense fallback={<div>LOADING...</div>}>
+        <Suspense fallback={<div className={'container'}>Загрузка...</div>}>
           <Routes>
             <Route path={'/'} element={<MainPage/>}/>
             <Route path={'/about'} element={<AboutPage/>}/>

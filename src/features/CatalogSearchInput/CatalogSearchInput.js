@@ -15,7 +15,7 @@ export const CatalogSearchInput = ({onSubmit}) => {
         pathname: '/',
         search: `?${createSearchParams({search})}`,
       });
-      onSubmit()
+      onSubmit?.()
     }
   }, [navigate, onSubmit, search])
 

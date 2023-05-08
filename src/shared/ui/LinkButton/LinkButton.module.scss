@@ -1,0 +1,44 @@
+.linkButton {
+  cursor: pointer;
+}
+
+.clear {
+  outline: none;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.outline {
+  background: #FED557;
+  outline: none;
+  border: none;
+  border-radius: 14px;
+  padding: 6px 6px;
+}
+
+.size_m {
+  font: var(--font-m);
+}
+
+.size_l {
+  font: var(--font-l);
+}
+
+.size_s {
+  font: var(--font-s);
+}
+
+
+@media (max-width: 1200px) {
+  .size_s {
+    font: var(--font-xs);
+  }
+  .size_m {
+    font: var(--font-s);
+  }
+
+  .size_l {
+    font: var(--font-m);
+  }
+}

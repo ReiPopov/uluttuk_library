@@ -1,29 +1,34 @@
 import React from 'react';
-import {Button, Text, VStack} from "../../../../../shared";
+import {Text, VStack} from "../../../../../shared";
 
 import cls from './NewsItem.module.scss'
 import PropTypes from "prop-types";
+import {LinkButton} from "../../../../../shared/ui/LinkButton/LinkButton";
 
-export const NewsItem = (props) => {
-  const {text, img} = props
+export const NewsItem = ({item}) => {
   return (
     <VStack className={cls.wrapper}>
-      <img src={img} alt={img} className={cls.img}/>
+      <img src={item.images[0]} alt={'news_image'} className={cls.img}/>
       <div className={cls.contentInfo}>
-        <Text size={'size_l'} text={text}/>
-        <Button
+        <Text size={'size_l'} text={item.previewText}/>
+        <LinkButton
           size={'size_m'}
           variant={'outline'}
           className={cls.btn}
+          to={`news/${item.id}`}
         >
           Читать полностью
-        </Button>
+        </LinkButton>
       </div>
     </VStack>
   );
 };
 
 NewsItem.propTypes = {
-  text: PropTypes.string,
-  img: PropTypes.string
+  item: PropTypes.shape({
+    id: PropTypes.number,
+    images: PropTypes.arrayOf(PropTypes.string),
+    textBlocks: PropTypes.arrayOf(PropTypes.string),
+    previewText: PropTypes.string,
+  })
 }

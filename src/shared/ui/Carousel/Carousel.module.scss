@@ -1,0 +1,39 @@
+.img {
+  border-radius: 20px;
+}
+
+.arrowStyles {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s linear;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.arrowLeft {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  left: 0;
+  top: 0
+}
+
+.arrowRight {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  right: 0;
+  top: 0
+}
+
+@media (max-width: 970px) {
+  .arrowStyles {
+    width: 30px;
+  }
+}

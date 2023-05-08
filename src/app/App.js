@@ -9,6 +9,8 @@ import {ContactsPage} from "../pages/ContactsPage";
 import {SMALL_SCREEN, useWindowDimensions} from "../shared";
 import {AuthPage} from "../pages/AuthPage";
 import {CatalogDetailsPage} from "../pages/CatalogDetailsPage";
+import {NotFoundPage} from "../pages/NotFoundPage";
+import {NewsDetailsPage} from "../pages/NewsDetailsPage";
 
 function App() {
   const {width} = useWindowDimensions()
@@ -43,7 +45,9 @@ function App() {
             <Route path={'/catalog/:type'} element={<CatalogDetailsPage/>}/>
             <Route path={'/department'} element={<DepartmentPage/>}/>
             <Route path={'/contacts'} element={<ContactsPage/>}/>
+            <Route path={'/news/:id'} element={<NewsDetailsPage/>}/>
             <Route path={'/auth'} element={<AuthPage/>}/>
+            <Route path={'*'} element={<NotFoundPage/>}/>
           </Routes>
         </Suspense>
       </main>

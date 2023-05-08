@@ -1,12 +1,13 @@
 import React from 'react';
 import cls from './Footer.module.scss'
-import {HStack, Text, useWindowDimensions, VStack} from "../../shared";
+import {AppLink, HStack, Text, useWindowDimensions, VStack} from "../../shared";
 import Logo from '../../shared/assets/icons/footer_logo.png'
 import Inst from '../../shared/assets/icons/instagram.svg'
 import Facebook from '../../shared/assets/icons/facebook.svg'
 import Vk from '../../shared/assets/icons/vk.svg'
 import {Flex} from "../../shared/ui/Stack/Flex/Flex";
 
+const currentYear = new Date().getFullYear()
 
 export const Footer = () => {
   const {isSmallScreen} = useWindowDimensions()
@@ -19,10 +20,21 @@ export const Footer = () => {
           <VStack align={isSmallScreen ? 'center' : 'start'}>
             <Text color={'white'} size={'size_l'} title={'О библиотеке'} className={cls.title}/>
             <VStack gap={'16'} align={isSmallScreen ? 'center' : 'start'} max>
-              <Text color={'white'} size={'size_l'} text={'История библиотеки'}/>
-              <Text color={'white'} size={'size_l'} text={'Отдел ОДА'}/>
-              <Text color={'white'} size={'size_l'} text={'Каталог диссертаций и авторефератов'}/>
-              <Text color={'white'} size={'size_l'} text={'Новости'}/>
+              <AppLink to={'/about'}>
+                <Text color={'white'} size={'size_l'} text={'История библиотеки'}/>
+              </AppLink>
+              <AppLink to={'/department'}>
+                <Text color={'white'} size={'size_l'} text={'Отдел ОДА'}/>
+              </AppLink>
+              <AppLink to={'/catalog'}>
+                <Text color={'white'} size={'size_l'}
+                      text={'Каталог диссертаций и авторефератов'}/>
+              </AppLink>
+              <AppLink to={'/'}>
+                <Text color={'white'} size={'size_l'} text={'Новости'}/>
+              </AppLink>
+
+
             </VStack>
           </VStack>
           <VStack align={'center'}>
@@ -63,7 +75,7 @@ export const Footer = () => {
             className={cls.footer_copyright_text}
             align={'center'}
             color={'white'}
-            text={'©️2023 Все права защищены'}
+            text={`©️${currentYear} Все права защищены`}
           />
         </div>
       </div>

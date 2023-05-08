@@ -33,7 +33,7 @@ export const Header = (props) => {
                   {t('phone_short')} : +996 (312) 30-46-75
                 </AppLink>
                 <AppLink to={'tel:+996(312)304688'} className={cls.tel}>
-                  {t('phone_short')} : +996 (312) 30-46-88
+                  {t('fax')} : +996 (312) 30-46-88
                 </AppLink>
               </VStack>
             </HStack>

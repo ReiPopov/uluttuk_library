@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import cls from './NavBar.module.scss'
 import {HStack} from "../../../../shared";
 import {faBookOpen, faBuildingColumns, faEnvelope, faGraduationCap, faHouse} from "@fortawesome/free-solid-svg-icons";
 import {NavBarLinkButton} from "../NavBarButton/NavBarLinkButton";
-import {useLocation} from "react-router-dom";
 import {CatalogSearchInput} from "../../../../features";
 
 const linkButtons = [
@@ -34,10 +33,7 @@ const linkButtons = [
   },
 ]
 
-export const NavBar = () => {
-  const {pathname} = useLocation()
-  const [activeLinkBtn, setActiveLinkBtn] = useState(pathname)
-
+export const NavBar = ({pathname}) => {
   return (
     <HStack className={cls.navbar}>
       <HStack justify={'between'} gap={'32'} className={'container'}>
@@ -49,8 +45,7 @@ export const NavBar = () => {
               key={item.to}
               icon={item.icon}
               text={item.text}
-              active={item.to === activeLinkBtn}
-              onClick={() => setActiveLinkBtn(item.to)}
+              active={item.to === pathname}
             />
           )}
         </HStack>

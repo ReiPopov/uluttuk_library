@@ -55,9 +55,9 @@ export const Footer = () => {
               </AppLink>
             </VStack>
           </VStack>
-          <VStack align={'center'} gap={'8'}>
+          <VStack align={'center'}>
             <img src={Logo} alt="footer_logo" className={cls.logo}/>
-            <HStack>
+            <HStack max justify={'center'} gap={'8'}>
               <AppLink scrollToTop={false} target={'_blank'} to={'https://ru-ru.facebook.com/libkr/'}>
                 <img src={Facebook} alt="facebook" className={cls.icon}/>
               </AppLink>

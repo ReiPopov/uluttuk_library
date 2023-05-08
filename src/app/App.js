@@ -6,7 +6,7 @@ import {Footer, Header, MenuMobile, NavBar} from "../widgets";
 import {CatalogPage} from "../pages/CatalogPage";
 import {DepartmentPage} from "../pages/DepartmentPage";
 import {ContactsPage} from "../pages/ContactsPage";
-import {SMALL_SCREEN, useWindowDimensions} from "../shared";
+import {useWindowDimensions} from "../shared";
 import {AuthPage} from "../pages/AuthPage";
 import {CatalogDetailsPage} from "../pages/CatalogDetailsPage";
 import {NotFoundPage} from "../pages/NotFoundPage";
@@ -14,7 +14,7 @@ import {NewsDetailsPage} from "../pages/NewsDetailsPage";
 import {BackToTopButton} from "../widgets/BackToTopButton/BackToTopButton";
 
 function App() {
-  const {width} = useWindowDimensions()
+  const {isSmallScreen} = useWindowDimensions()
   const [sidebarActive, setSidebarActive] = useState(false)
 
   const {pathname} = useLocation()
@@ -26,18 +26,21 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (width > SMALL_SCREEN) {
+    if (!isSmallScreen) {
       setSidebarActive(false)
     }
     const body = document.body
     body.classList.toggle('stop_scrolling', sidebarActive);
-  }, [sidebarActive, width])
+  }, [isSmallScreen, sidebarActive])
 
   return (
     <div className={'page'} style={{display: isAuthPage ? 'none' : 'block'}}>
+      <Header toggle={toggle}/>
+      {isSmallScreen
+        ? <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>
+        : <NavBar pathname={pathname}/>
+      }
       <Suspense fallback={<div className={'container'}>Загрузка...</div>}>
-        <Header toggle={toggle}/>
-        {width > SMALL_SCREEN ? <NavBar/> : <MenuMobile active={sidebarActive} setActive={setSidebarActive}/>}
         <main className={'main'}>
           <Routes>
             <Route path={'/'} element={<MainPage/>}/>
@@ -51,8 +54,8 @@ function App() {
             <Route path={'*'} element={<NotFoundPage/>}/>
           </Routes>
         </main>
-        <Footer/>
       </Suspense>
+      <Footer/>
       <BackToTopButton/>
     </div>
   );

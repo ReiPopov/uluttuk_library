@@ -1,5 +1,5 @@
 import cls from './ContactUsBlock.module.scss'
-import {Text, useWindowDimensions, VStack} from "../../../../shared";
+import {AppLink, Text, useWindowDimensions, VStack} from "../../../../shared";
 import {faEnvelope, faLocationDot, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -22,12 +22,16 @@ export const ContactUsBlock = () => {
           <VStack align={'center'} className={cls.contactItem}>
             <FontAwesomeIcon size={isSmallScreen ? '2x' : '3x'} icon={faUser} className={cls.icon}/>
             <Text size={'size_l'} text={'Телефон:'}/>
-            <Text size={'size_l'} text={'+996 (312) 30-46-75'} className={cls.underlined}/>
+            <AppLink scrollToTop={false} to={'tel:+996(312)304675'}>
+              <Text size={'size_l'} text={'+996 (312) 30-46-75'} className={cls.link}/>
+            </AppLink>
           </VStack>
           <VStack align={'center'} className={cls.contactItem}>
             <FontAwesomeIcon size={isSmallScreen ? '2x' : '3x'} icon={faEnvelope} className={cls.icon}/>
             <Text size={'size_l'} text={'Email:'}/>
-            <Text size={'size_l'} text={'library@nlkr.gov.kg'} className={cls.underlined}/>
+            <AppLink scrollToTop={false} to={'mailto:library@nlkr.gov.kg'}>
+              <Text size={'size_l'} text={'library@nlkr.gov.kg'} className={cls.link}/>
+            </AppLink>
           </VStack>
         </Flex>
       </div>

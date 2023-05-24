@@ -27,7 +27,7 @@
   height: 100%;
   padding: 10px;
   background: var(--primary-bg);
-  box-shadow: 10px -10px 10px -5px rgba(0, 0, 0, 1);
+  box-shadow: 10px -10px 10px -5px rgb(0, 0, 0);
 }
 
 .tel:hover {
@@ -35,7 +35,7 @@
 }
 
 .link {
-  color: #000;
+  color: #000000;
   width: 100%;
   border-radius: 10px;
   font-size: 16px;

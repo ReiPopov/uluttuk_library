@@ -38,7 +38,7 @@ export const Header = (props) => {
               </VStack>
             </HStack>
             <LangSwitcher/>
-            <AppLink to={'/auth'}>{t('login')}</AppLink>
+            <AppLink to={'/auth'}><Text color={'white'} size={'size_l'} text={t('login')}/></AppLink>
           </>)
         }
         {

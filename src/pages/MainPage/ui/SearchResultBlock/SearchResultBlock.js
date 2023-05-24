@@ -7,16 +7,16 @@ import cls from './SearchResultBlock.module.scss'
 // Имитация запроса
 const searchDissertationsByValue = (value) => new Promise(resolve => {
   setTimeout(() => {
-    const _value = value.toLowerCase()
+    const _value = value.toLowerCase().trim()
     const catalogDissertations = CATALOGS.map(c => c.dissertations.length ? c.dissertations : null).filter(Boolean).flat()
     const catalogsByName = CATALOGS
-      .filter(c => c.name.toLowerCase().includes(_value))
+      .filter(c => c.name.toLowerCase().trim().includes(_value))
       .map(c => c.dissertations.length ? c.dissertations : null)
       .filter(Boolean)
       .flat()
-    const catalogsByAuthor = catalogDissertations.filter((c) => c.author.toLowerCase().includes(_value))
-    const catalogsByStorageCipher = catalogDissertations.filter(c => c.storage_cipher.toLowerCase().includes(_value))
-    const catalogsByText = catalogDissertations.filter(c => c.text.toLowerCase().includes(_value))
+    const catalogsByAuthor = catalogDissertations.filter((c) => c.author.toLowerCase().trim().includes(_value))
+    const catalogsByStorageCipher = catalogDissertations.filter(c => c.storage_cipher.toLowerCase().trim().includes(_value))
+    const catalogsByText = catalogDissertations.filter(c => c.text.toLowerCase().trim().includes(_value))
 
     if (catalogsByName.length) {
       return resolve({list: catalogsByName})

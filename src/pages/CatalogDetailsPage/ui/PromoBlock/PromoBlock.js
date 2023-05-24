@@ -1,11 +1,10 @@
 import cls from './PromoBlock.module.scss'
-import {SMALL_SCREEN, Text, useWindowDimensions, VStack} from "../../../../shared";
+import {Text, VStack} from "../../../../shared";
 
 export const PromoBlock = ({title}) => {
-  const {width} = useWindowDimensions()
   return (
     <div className={cls.promo}>
-      <VStack max justify={'center'} align={width > SMALL_SCREEN ? 'end' : 'center'} className="container">
+      <VStack max justify={'center'} align={'center'} className="container">
         <Text
           color={'white'}
           size={'size_xl'}

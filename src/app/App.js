@@ -34,12 +34,14 @@ function App() {
   }, [isSmallScreen, sidebarActive])
 
   return (
-    <div className={'page'} style={{display: isAuthPage ? 'none' : 'block'}}>
-      <Header toggle={toggle}/>
-      {isSmallScreen
-        ? <MenuMobile pathname={pathname} active={sidebarActive} setActive={setSidebarActive}/>
-        : <NavBar pathname={pathname}/>
-      }
+    <div className={'page'} style={{display: isAuthPage ? 'none' : 'flex'}}>
+      <div>
+        <Header toggle={toggle}/>
+        {isSmallScreen
+          ? <MenuMobile pathname={pathname} active={sidebarActive} setActive={setSidebarActive}/>
+          : <NavBar pathname={pathname}/>
+        }
+      </div>
       <Suspense fallback={<div className={'container'}>Загрузка...</div>}>
         <main className={'main'}>
           <Routes>

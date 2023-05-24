@@ -30,15 +30,15 @@ export const Header = (props) => {
               <FontAwesomeIcon size={'2x'} icon={faUser} className={cls.icon}/>
               <VStack>
                 <AppLink to={'tel:+996(312)304675'} className={cls.tel}>
-                  {t('phone_short')} : +996 (312) 30-46-75
+                  <Text color={'white'} size={"size_l"} text={`${t('phone_short')} : +996 (312) 30-46-75`}/>
                 </AppLink>
                 <AppLink to={'tel:+996(312)304688'} className={cls.tel}>
-                  {t('fax')} : +996 (312) 30-46-88
+                  <Text color={'white'} size={"size_l"} text={`${t('fax')} : +996 (312) 30-46-88`}/>
                 </AppLink>
               </VStack>
             </HStack>
             <LangSwitcher/>
-            <AppLink to={'/auth'}>{t('login')}</AppLink>
+            <AppLink to={'/auth'}><Text color={'white'} size={'size_l'} text={t('login')}/></AppLink>
           </>)
         }
         {

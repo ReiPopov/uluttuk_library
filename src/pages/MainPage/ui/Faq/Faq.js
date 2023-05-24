@@ -24,6 +24,7 @@ const faqs = [
 
 export const Faq = () => {
   const {t} = useTranslation()
+  console.log('test')
   return (
     <div className={'container'}>
       <div className={cls.wrapper}>
